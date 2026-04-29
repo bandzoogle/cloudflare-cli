@@ -84,6 +84,19 @@ Unlike most commands, `cfcli scopes` prints a compact human-readable list by def
 
 This CLI complements MCP rather than replacing it everywhere. MCP helps with integrated auth and rich tool discovery, but adds server and tool context to conversations. A CLI gives agents a smaller contract: `--help`, explicit commands, JSON stdout, stderr diagnostics, and replayable invocations outside Cursor.
 
+## Binary releases
+
+Pushes to `main` that pass CI and change Go sources or `go.mod` / `go.sum` trigger a patch semver GitHub release (for example `v0.1.1`). Builds are published for Linux and macOS on `amd64` and `arm64`.
+
+Stable download URLs (always point at the **latest** release’s asset names):
+
+- Linux x86_64: `https://github.com/bandzoogle/cloudflare-cli/releases/latest/download/cfcli_linux_amd64.tar.gz`
+- Linux arm64: `https://github.com/bandzoogle/cloudflare-cli/releases/latest/download/cfcli_linux_arm64.tar.gz`
+- macOS x86_64: `https://github.com/bandzoogle/cloudflare-cli/releases/latest/download/cfcli_darwin_amd64.tar.gz`
+- macOS arm64: `https://github.com/bandzoogle/cloudflare-cli/releases/latest/download/cfcli_darwin_arm64.tar.gz`
+
+Each archive contains a single `cfcli` binary. Run `cfcli --version` to see the release tag baked into the binary. Versioned archives (`cfcli_<tag>_linux_amd64.tar.gz`, etc.) are attached for pinning.
+
 ## Development
 
 ```sh

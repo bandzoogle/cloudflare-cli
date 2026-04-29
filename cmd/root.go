@@ -23,8 +23,9 @@ type globalOptions struct {
 var globals globalOptions
 
 var rootCmd = &cobra.Command{
-	Use:   "cfcli",
-	Short: "Read-only Cloudflare CLI for scripts and LLM agents",
+	Use:     "cfcli",
+	Version: Version,
+	Short:   "Read-only Cloudflare CLI for scripts and LLM agents",
 	Long: `cfcli wraps read-only Cloudflare API calls with stable JSON output.
 
 Authenticate with an API token via CLOUDFLARE_API_TOKEN or CF_API_TOKEN.`,
