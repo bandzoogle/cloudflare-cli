@@ -58,6 +58,11 @@ cfcli zones get ZONE_ID
 cfcli zones settings list --zone-name example.com
 cfcli zones settings get email_obfuscation --zone-name example.com
 
+cfcli zones bot-management get --zone-name example.com
+cfcli zones rulesets list --zone-name example.com
+cfcli zones rulesets get RULESET_ID --zone-name example.com
+cfcli zones waf analytics --zone-name example.com --since 7d
+
 cfcli dns list --zone-id ZONE_ID
 cfcli dns list --zone-name example.com --type A
 cfcli dns get --zone-id ZONE_ID --record-id RECORD_ID

@@ -21,6 +21,8 @@ type Options struct {
 type Client struct {
 	API       *cloudflare.API
 	AccountID string
+	apiToken  string
+	http      *http.Client
 }
 
 func ResolveOptions(opts Options) Options {
@@ -55,7 +57,22 @@ func NewClient(opts Options) (*Client, error) {
 	return &Client{
 		API:       api,
 		AccountID: opts.AccountID,
+		apiToken:  opts.APIToken,
+		http:      httpClient,
 	}, nil
+}
+
+// APIToken returns the configured API token.
+func (c *Client) APIToken() string {
+	return c.apiToken
+}
+
+// HTTPClient returns the HTTP client used for API calls.
+func (c *Client) HTTPClient() *http.Client {
+	if c.http != nil {
+		return c.http
+	}
+	return http.DefaultClient
 }
 
 func validateAuth(opts Options) error {
