@@ -112,6 +112,33 @@ func requiredScopes() []scopeInfo {
 			},
 		},
 		{
+			Command:    "zones bot-management get",
+			API:        "Bot Management API",
+			Permission: "Zone → Bot Management → Read",
+			TokenTemplates: []string{
+				"Custom: Zone / Bot Management / Read",
+			},
+		},
+		{
+			Command:    "zones rulesets list|get",
+			API:        "Rulesets API",
+			Permission: "Zone → Firewall Services → Read",
+			TokenTemplates: []string{
+				"Custom: Zone / Firewall Services / Read",
+			},
+		},
+		{
+			Command:    "zones waf analytics",
+			API:        "GraphQL Analytics API",
+			Permission: "Zone → Analytics → Read",
+			Notes: []string{
+				"Uses firewallEventsAdaptiveGroups via the Cloudflare GraphQL API.",
+			},
+			TokenTemplates: []string{
+				"Custom: Zone / Analytics / Read",
+			},
+		},
+		{
 			Command:    "dns list|get",
 			API:        "DNS Records API",
 			Permission: "Zone → DNS → Read",

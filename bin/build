@@ -18,6 +18,10 @@ echo "==> smoke testing"
 "$output" --help >/dev/null
 "$output" zones list --help >/dev/null
 "$output" zones get --help >/dev/null
+"$output" zones settings list --help >/dev/null
+"$output" zones bot-management get --help >/dev/null
+"$output" zones rulesets list --help >/dev/null
+"$output" zones waf analytics --help >/dev/null
 "$output" dns list --help >/dev/null
 "$output" dns get --help >/dev/null
 "$output" accounts list --help >/dev/null
