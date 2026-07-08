@@ -55,6 +55,9 @@ cfcli zones list
 cfcli zones list --name example.com
 cfcli zones get ZONE_ID
 
+cfcli zones settings list --zone-name example.com
+cfcli zones settings get email_obfuscation --zone-name example.com
+
 cfcli dns list --zone-id ZONE_ID
 cfcli dns list --zone-name example.com --type A
 cfcli dns get --zone-id ZONE_ID --record-id RECORD_ID

@@ -104,6 +104,14 @@ func requiredScopes() []scopeInfo {
 			},
 		},
 		{
+			Command:    "zones settings list|get",
+			API:        "Zone Settings API",
+			Permission: "Zone → Zone Settings → Read",
+			TokenTemplates: []string{
+				"Custom: Zone / Zone Settings / Read",
+			},
+		},
+		{
 			Command:    "dns list|get",
 			API:        "DNS Records API",
 			Permission: "Zone → DNS → Read",
